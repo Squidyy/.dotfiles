@@ -1,3 +1,4 @@
+
 function ColorMyPencils(color)
 	color = "cyberdream"
 	vim.cmd.colorscheme(color)
@@ -7,4 +8,13 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
 end
 
-ColorMyPencils()
+return{
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function() 
+	ColorMyPencils()
+    end
+
+}
+
