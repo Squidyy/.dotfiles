@@ -13,6 +13,7 @@ brew install ripgrep
 
 # set up sym links so our .dotfiles can be in this repo but accessed by the system as needed
 # Run this from the directory of the git repo
-#ln -s `pwd`/.zshrc ~/.zshrc
 ln -s `pwd`/nvim ~/.config/nvim
+ln -s `pwd`/shell/.bashrc ~/.bashrc
+ln -s `pwd`/shell/.zshrc ~/.zshrc
 #ln -s `pwd`/gitconfig ~/.gitcofig

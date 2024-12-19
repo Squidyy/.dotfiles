@@ -8,6 +8,10 @@ vim.opt.expandtab = true
 -- set numbers on by default
 vim.wo.relativenumber = true
 vim.wo.number = true
+vim.api.nvim_set_hl(0, 'LineNr', { fg = "red"})
+--vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "green"})
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "lightgreen"})
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "lightgreen"})
 
 -- Configure column colors so we have lenght markers
 vim.cmd[[set colorcolumn=120]]
