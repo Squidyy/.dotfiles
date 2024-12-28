@@ -12,6 +12,7 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg = "red"})
 
 --set no wrap because im not a monster
 vim.api.wrap = false
+vim.wo.wrap = false
 
 --vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "green"})
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "lightgreen"})

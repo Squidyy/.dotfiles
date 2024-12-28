@@ -2,4 +2,4 @@ require("config.lazy")
 require("config.options")
 require("remap")
 
-print("well hello there")
+-- print("well hello there")
