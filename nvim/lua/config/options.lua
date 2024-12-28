@@ -4,6 +4,8 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+-- set "padding" around current line, so we stay vertecally centered
+vim.opt.scrolloff = 50
 
 -- set numbers on by default
 vim.wo.relativenumber = true
