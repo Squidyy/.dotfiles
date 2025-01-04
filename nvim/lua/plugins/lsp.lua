@@ -32,8 +32,11 @@ return {
       ensure_installed = {
         "ltex",
         "lua_ls",
-        -- "rust_analyzer",
-        -- "tsserver",
+        "gopls",
+        "eslint",
+        "ts_ls",
+        "ruby_lsp",
+        "rubocop",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -82,6 +85,7 @@ return {
       }
     })
 
+-- Set up our cmp, which is the dropdown box for autocompelete, its a visual selection tool
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
     cmp.setup({

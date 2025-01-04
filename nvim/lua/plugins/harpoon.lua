@@ -1,9 +1,9 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  dependencies = { 
-    {"nvim-lua/plenary.nvim"}, 
-    {"nvim-telescope/telescope.nvim"} 
+  dependencies = {
+    {"nvim-lua/plenary.nvim"},
+    {"nvim-telescope/telescope.nvim"}
   },
   config = function()
     local harpoon = require("harpoon")
@@ -25,7 +25,7 @@ return {
         sorter = conf.generic_sorter({}),
        }):find()
     end
-    
+
     vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
     vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
