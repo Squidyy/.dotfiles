@@ -32,11 +32,11 @@ return {
       ensure_installed = {
         "ltex",
         "lua_ls",
+        "marksman", 
         "gopls",
         "eslint",
         "ts_ls",
         "ruby_lsp",
-        "rubocop",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -93,6 +93,10 @@ return {
         expand = function(args)
           luasnip.lsp_expand(args.body) -- For `luasnip` users.
         end,
+      },
+      window = {
+        documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert({
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
