@@ -14,6 +14,11 @@ vim.keymap.set('n', '<C-k>', '<C-W>k', { silent = true })
 vim.keymap.set('n', '<C-l>', '<C-W>l', { silent = true })
 vim.keymap.set('n', '<C-h>', '<C-W>h', { silent = true })
 
+-- remaping our comment out code 'gcc/gbc' 'gc/gb' 
+vim.keymap.set('n', '<leader>/', 'gcc', { remap = true })
+vim.keymap.set('n', '<leader>//', 'gbc', { remap = true })
+vim.keymap.set('v', '<leader>/', 'gc', { remap = true })
+vim.keymap.set('v', '<leader>//', 'gb', { remap = true })
 
 -- default hotkey reminders
 -- 'n' 'gc', "code comments"
