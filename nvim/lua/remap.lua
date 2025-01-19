@@ -13,3 +13,8 @@ vim.keymap.set('n', '<C-j>', '<C-W>j', { silent = true })
 vim.keymap.set('n', '<C-k>', '<C-W>k', { silent = true })
 vim.keymap.set('n', '<C-l>', '<C-W>l', { silent = true })
 vim.keymap.set('n', '<C-h>', '<C-W>h', { silent = true })
+
+
+-- default hotkey reminders
+-- 'n' 'gc', "code comments"
+-- lua-tree 'n', '<leader> t', toggle tree

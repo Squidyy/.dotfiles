@@ -14,6 +14,5 @@ return {
       vim.keymap.set("n", "<leader>t", "<Cmd>NvimTreeToggle<CR>")
 
     end
-    
   }
 }

@@ -1,20 +1,20 @@
-
-function ColorMyPencils(color)
-	color = "cyberdream"
-	vim.cmd.colorscheme(color)
-
-	-- Set background to transparent
-	vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-	vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-end
-
-return{
-    "scottmckendry/cyberdream.nvim",
+return {
+  {    "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
-    config = function() 
-	ColorMyPencils()
-    end
+    config = function()
+      local cyber = require("cyberdream")
+      cyber.setup({
+        borderless_telescope = false,
+        transparent = true,
+      })
+      -- Add a custom keybinding to toggle the colorscheme
+      vim.api.nvim_set_keymap("n", "<leader>tt", ":CyberdreamToggleMode<CR>", { noremap = true, silent = true })
 
+      -- call our colors to be applyed!!!
+      vim.cmd.colorscheme("cyberdream")
+    end
+  }
 }
+
 
