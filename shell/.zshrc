@@ -108,8 +108,11 @@ ssh-add ~/.ssh/github
 
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(rbenv init - --no-rehash zsh)"
+
+# If we are on linus we need to set our linux brew up
+[[ "$(uname)" != "Darwin" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# This is only if we have ruby installed
+#eval "$(rbenv init - --no-rehash zsh)"
